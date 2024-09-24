@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image:linear-gradient(to right, rgba(0, 0, 0, 0.788) , rgba(122, 5, 151, 0.719));
+            color: white;
+        }
+        .box{  
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 30px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+        fieldset{
+            border: solid purple;
+        }
+        legend{
+            border: 1px solid purple;
+            padding: 10px;
+            text-align: center;
+            background-color: purple;
+            border-radius: 5px;
+        }
+        .inputbox{
+            position: relative;
+        }
+        .inputuser{
+            border: none;
+            background: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .stylelabel{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputuser:focus ~ .stylelabel,
+        .inputuser:valid ~ .stylelabel{
+            top:-20px;
+            font-size: 10px;
+            color: rgb(104, 0, 189);
+        }
+        #data_nascimento{
+            background: none;
+            border: none;
+            padding: 5px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            color: white;
+        }
+        #submit{
+            background-image: linear-gradient(to right, rgba(51, 1, 187, 0.726),blueviolet);
+        width: 100%;
+        border: none;
+        border-radius: 15px;
+        padding: 15px;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>formulário</b></legend>
+                <br><br>
+                <div class="inputbox">
+                    <input type="text" name="nome" id="nome" class="inputuser" required>
+                    <label for="nome" class="stylelabel">Nome Completo</label>
+                </div>
+                <br><br>
+                <div class="inputbox">
+                    <input type="text" name="email" id="email" class="inputuser" required>
+                    <label for="email" class="stylelabel">Email</label>
+                </div> 
+                <br><br>
+                <div class="inputbox">
+                    <input type="tel" name="tell" id="tell" class="inputuser" required>
+                    <label for="tell" class="stylelabel">Telefone</label>
+                </div>
+                <p>Sexo</p>
+                <input type="radio" name="sexo" value="feminino">
+                <label for="feminino">Feminino</label>
+                <br>
+                <input type="radio" name="sexo" value="male">
+                <label for="male">Masculino</label>
+                <br>
+                <input type="radio" name="sexo" value="outro">
+                <label for="outro">Outro</label> 
+                <br><br>
+                <label for="data_nascimento"><b>Data de Nascimeno</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset> 
+        </form>
+    </div>
+    
+</body>
+</html>
